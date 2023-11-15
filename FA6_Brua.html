@@ -1,0 +1,72 @@
+<DOCTYPE! html>
+    <html>
+        <head>
+            <style>
+                a:link {
+                color: black;
+                background-color: #3498db;
+                }                
+
+                 a:visited {
+                 color: chartreuse;
+                  background-color: #e74c3c;
+                }
+
+                 a:hover {
+                  color: gold;
+                  background-color: #2ecc71;
+                }
+
+                 a:active {
+                  color: cyan;
+                  background-color: #f39c12;
+                }
+                
+                #div1 {
+                    width: 200px;
+                    height: 100px;
+                    padding: 10px;
+                    border: 3px solid black;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                #div2 {
+                    width: 200px;
+                    height: 100px;
+                    padding: 10px;
+                    border: 3px solid black;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                a{
+                    margin-right: 10px;
+                    border-style: solid;
+                    border-color: orangered;
+                    background-color: orangered;
+                    font-size: 25px;
+                    text-decoration: none;
+                }
+                #div1:target {
+                    background-color: cyan;
+                    color: red;
+                    font-style:initial;
+                }
+                #div2:target {
+                    background-color: darkslategray;
+                    border: 10px dotted green;
+                    font-style:initial;
+                }
+            </style>
+            <title>Link States</title>
+        </head>
+        <body>
+            <a id="firstlink" href="#div1"> First Link</a>
+            <a id="secondlink" href="#div2">Second Link</a>
+            <br>
+            <br>
+            <div id="div1">Div 1 is here</div>
+            <br>
+            <div id="div2">Div 2 is here</div>
+            </div>
+        </body>
+    </html>
