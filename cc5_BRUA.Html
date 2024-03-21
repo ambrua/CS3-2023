@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames() {
+            var name1 = prompt("Enter name 1.");
+            var name2 = prompt("Enter name 2.");
+
+            name1 = removeWhiteSpaceAndSpecialCharacters(name1);
+            name2 = removeWhiteSpaceAndSpecialCharacters(name2);
+
+            document.getElementById("name").innerText = "Names: " + name1 + " and " + name2;
+
+            var totalCharacters = (name1.length + name2.length);
+            var flamesIndex = totalCharacters % 6;
+            var result = "";
+            switch (flamesIndex) {
+                case 1:
+                    result = "friends";
+                    break;
+                case 2:
+                    result = "lovers";
+                    break;
+                case 3:
+                    result = "acquaintances";
+                    break;
+                case 4:
+                    result = "marriage";
+                    break;
+                case 5:
+                    result = "enemies";
+                    break;
+                case 0:
+                    result = "sweethearts";
+                    break;
+            }
+
+            document.getElementById("result").innerText = "Relationship: " + result;
+            }
+         </script>
+    </body>
+</html>
